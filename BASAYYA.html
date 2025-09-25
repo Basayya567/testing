@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASAYYA | Developer</title>
+  <style>
+    :root {
+      --bg: #0a0f1f;
+      --accent: #00ffe7;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --gradient: linear-gradient(135deg, #00ffe7, #007bff);
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3.5rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      background: var(--gradient);
+      color: #0a0f1f;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,255,231,0.3);
+    }
+    .floating-shapes div {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      background: var(--gradient);
+      animation: float 8s linear infinite;
+    }
+    .floating-shapes div:nth-child(1) { width: 80px; height: 80px; left: 10%; top: 20%; animation-duration: 12s; }
+    .floating-shapes div:nth-child(2) { width: 120px; height: 120px; right: 15%; top: 30%; animation-duration: 15s; }
+    .floating-shapes div:nth-child(3) { width: 60px; height: 60px; left: 20%; bottom: 20%; animation-duration: 10s; }
+    .floating-shapes div:nth-child(4) { width: 100px; height: 100px; right: 25%; bottom: 10%; animation-duration: 18s; }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7; }
+      to   { text-shadow: 0 0 25px #007bff, 0 0 40px #007bff; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-shapes">
+    <div></div><div></div><div></div><div></div>
+  </div>
+  <h1>BASAYYA</h1>
+  <h2>DEVOPS ENGINEER</h2>
+  <button class="btn">Hire Me 🚀</button>
+</body>
+</html>
